@@ -20,9 +20,7 @@
 .logo-img{
     display: inline-block;
 }
-img{
-    color: blue;
-}
+
 
 nav ul {
     display: flex;
@@ -221,8 +219,15 @@ padding-bottom: 25px;
 
 .big-item{
     flex: 2;
-  
-    
+    width: 100%;
+    height: 100%;
+    position: relative;
+
+}
+
+.big-item img{
+    width: 100%;
+    height: 70%;
 }
 
   
@@ -294,7 +299,7 @@ padding-top: 10px;
   .add-to-cart:hover{
     background-color: white;
     color: black;
-    border: 1px solid black;
+    border: 1px solid rgb(169, 169, 169);
   }
 
   .small-item-container{
@@ -304,4 +309,142 @@ padding-top: 10px;
     margin-bottom: 50px;
   }
 
+
+  .bit-imgage-floating {
+    text-decoration: none;
+    position: absolute;  
+   left: 250px;
+    bottom: 100px;          
+    background-color: rgb(255, 0, 0);  
+    color: rgb(255, 255, 255);                     
+    font-weight: bold;        
+    padding: 3px 8px;         
+    border-radius: 5px;     
+    text-align: center;      
+    height: 30px;
+    display: flex;
+    align-items: center;
+    font-size: 19px;
+    justify-content: center;
+    width: 150px;
+    transition: background-color 0.7s , color 0.3s;
+  }
+
+  .bit-imgage-floating:hover{
+    background-color: white;
+    color: red;
+  }
  
+
+  .custom-line {
+    height: 2px;            
+    width: 90%;              
+    background-color: #c3c3c3; 
+    border: none;           
+    margin: 20px auto;       
+  }
+
+  .offer-container{
+    padding-left: 100px;
+    padding-right: 100px;
+  }
+
+  .item-container{
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .sale{
+    position: absolute;  
+    top: 10px;           
+    left: 10px;          
+    background-color: rgb(251, 0, 0);  
+    color: rgb(255, 255, 255);             
+    font-size: 14px;          
+    font-weight: bold;        
+    padding: 3px 8px;         
+    border-radius: 12px;     
+    text-align: center;   
+    width: 70px; 
+    
+  }
+
+  /* footer */
+  .footer-container{
+    height: 250px;
+    display: flex;
+  }
+
+  .follow{
+    flex: 2;
+    
+  }
+
+  .quick-links{
+    flex: 2;
+    
+  }
+
+  .contact{
+flex: 2;
+background: red;
+  }
+  
+  .subscribe{
+    flex: 3;
+    background-color: yellow;
+  }
+
+  #mid-text{
+    padding-top: 30px;
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+  }
+
+  .follow ul{
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    align-items: center;
+    padding-top: 20px;
+  }
+
+  .follow ul li{
+    list-style: none;
+  }
+
+  .follow ul li a{
+    color: black;
+    font-size: 40px;
+  }
+
+  .follow ul li a i{
+    color: black;
+    size: 45px;
+  }
+
+  #quick-link{
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+  }
+
+  .quick-links ul{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    padding-top: 10px;
+    gap: 10px;
+  }
+
+  .quick-links ul li a{
+    text-decoration: none;
+    color: black;
+  }
+
+  .link{
+    display: flex;
+    justify-content: center;
+  }
+  
