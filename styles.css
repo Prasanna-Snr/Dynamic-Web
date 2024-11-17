@@ -346,7 +346,7 @@ padding-top: 10px;
 
   .offer-container{
     padding-left: 100px;
-    padding-right: 100px;
+    padding-right: 80px;
   }
 
   .item-container{
@@ -523,3 +523,64 @@ cursor: pointer;
   }
 
   /* ---------------------------------------categories page--------------------------------------------- */
+
+  .body-container{
+    display: flex;
+    margin-top: 30px;
+  }
+
+  .categories-section{
+    flex: 2;
+    padding-left: 100px;
+
+  }
+
+  .image-section{
+    flex: 7;
+    height: auto;
+    padding-left: 50px;
+    padding-right: 70px;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+  }
+
+  #heading-category{
+    font-size: large;
+    text-align: center;
+    font-weight: 100;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+
+  .categories-list{
+    background-color: #f1f1f1;
+    height: 770px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 20px;
+  }
+
+  .categories-list ul{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    list-style: none;
+  }
+
+ 
+
+  .categories-list ul li a {
+    text-decoration: none;
+    font-size: large;
+    text-align: center;
+    font-weight: 100; 
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #555;
+    border: 1px solid transparent;
+    transition: font-weight 0.3s ease, color 0.3s ease; 
+  }
+.categories-list ul li a:hover {
+    color: #000; 
+    font-weight: 400;
+}
+
