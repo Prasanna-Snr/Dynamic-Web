@@ -603,3 +603,98 @@ padding-top: 10px;
   justify-content: space-evenly;
   padding-bottom: 30px;
 }
+
+/* -------------------------------contact page------------------------------- */
+.contact-container{
+  margin-bottom: 165px;
+}
+
+.msg-info-section{
+  display: flex;
+  height: 300px;
+  margin-left: 200px;
+  margin-right: 200px;
+}
+.msg-section{
+  flex: 1;
+  padding-left: 30px;
+}
+
+.info-section{
+flex: 1;
+height: 300px;
+padding-left: 50px;
+}
+
+#second-heading{
+  font-size: 28px;
+  font-weight: 400;
+}
+#contact-input-field {
+  height: 30px;
+  outline: none; 
+  border: none;
+  border-radius: 7px;
+  padding-left: 10px;
+  width: 350px;
+  transition: box-shadow 0.3s ease, border-color 0.3s ease; 
+  background-color: rgb(239, 239, 239);
+}
+
+#contact-input-field::placeholder {
+  color: #bcbcbc;
+}
+
+#contact-input-field:focus {
+  box-shadow: 0 0 7px rgba(0, 0, 255, 0.5);
+}
+
+.left-side{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding-top: 20px;
+  padding-bottom: 30px;
+}
+
+#textarea {
+  background-color: rgb(239, 239, 239);
+  width: 350px; 
+  height: 150px; 
+  border-radius: 7px;
+  border: none;
+  padding: 10px;
+  outline: none; 
+  resize: none; 
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  transition: box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+#textarea::placeholder {
+  color: #bcbcbc;
+}
+
+#textarea:focus {
+  box-shadow: 0 0 7px rgba(0, 0, 255, 0.5);
+}
+
+
+#send-btn{
+  height: 30px;
+  width: 90px;
+  border: none;
+  border-radius: 5px;
+  background-color: rgb(4, 171, 4);
+  color: white;
+  transition: background-color 0.3s ;
+}
+
+#send-btn:hover{
+ background-color:rgb(1, 120, 1) ;
+}
+
+.icon-content-2{
+  display: flex;
+  gap: 20px;
+  padding-top: 15px;
+}
