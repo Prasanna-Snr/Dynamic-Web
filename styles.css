@@ -371,8 +371,12 @@ padding-top: 10px;
 
   /* footer */
   .footer-container{
-    height: 250px;
+    margin-top: 100px;
+    height:auto;
     display: flex;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    background-color:black;
   }
 
   .follow{
@@ -387,12 +391,17 @@ padding-top: 10px;
 
   .contact{
 flex: 2;
-background: red;
+
+
   }
   
   .subscribe{
-    flex: 3;
-    background-color: yellow;
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    gap: 10px;
+    padding-left: 30px;
   }
 
   #mid-text{
@@ -400,6 +409,7 @@ background: red;
     font-size: 24px;
     font-weight: bold;
     text-align: center;
+    color: white;
   }
 
   .follow ul{
@@ -420,14 +430,16 @@ background: red;
   }
 
   .follow ul li a i{
-    color: black;
+    color: white;
     size: 45px;
+
   }
 
   #quick-link{
     font-size: 24px;
     font-weight: bold;
     text-align: center;
+    color: white;
   }
 
   .quick-links ul{
@@ -436,15 +448,78 @@ background: red;
     justify-content: start;
     padding-top: 10px;
     gap: 10px;
+    color: white;
   }
 
   .quick-links ul li a{
     text-decoration: none;
-    color: black;
+    color: white;
   }
 
   .link{
     display: flex;
     justify-content: center;
   }
+
+  .icon-content{
+    display: flex;
+    width: 100%;
+    gap: 25px;
+    align-items: center;
+    padding-top: 10px;
+    
+  }
+
+  .icon-content i{
+    font-size: 15px;
+    color: white;
+  }
   
+
+  #txt{
+    color: white;
+  }
+
+
+  #subscribe{
+    font-weight: bold;
+    font-size: 24px;
+    color: white;
+  }
+
+  .subscribe input{
+    height: 30px;
+    width: 235px;
+    outline: none;
+    padding-left: 10px;
+  
+  }
+
+  .subscribe input::placeholder{
+    color: #bcbcbc;
+    padding-left: 10px;
+  }
+
+  .subscribe button{
+background-color: rgb(0, 199, 0);
+height: 35px;
+width: 100px;
+font-weight: 600;
+color: white;
+border: none;
+cursor: pointer;
+  }
+
+  .copyright{
+    display: flex;
+    height: 30px;
+    justify-content: center;
+    align-items: center;
+    background-color: #888;
+  }
+
+  .copyright p{
+    font-size: 16px;
+  }
+
+  /* ---------------------------------------categories page--------------------------------------------- */
