@@ -109,6 +109,7 @@ color: #bcbcbc;
 }
 .cart span{
     font-weight: bold;
+    color: black;
 }
 
 .cart i {
@@ -584,3 +585,21 @@ cursor: pointer;
     font-weight: 400;
 }
 
+/* -------------------------------product page------------------------------- */
+#first-product{
+  font-size: 40px;
+font-weight: bold;
+padding-bottom: 25px;
+text-align: center;
+padding-top: 10px;
+}
+
+.product-main-container{
+  padding-top: 20px;
+}
+
+.first-product-row{
+  display: flex;
+  justify-content: space-evenly;
+  padding-bottom: 30px;
+}
