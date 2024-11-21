@@ -634,7 +634,7 @@ padding-left: 50px;
   font-size: 28px;
   font-weight: 400;
 }
-#contact-input-field {
+.contact-input-field {
   height: 30px;
   outline: none; 
   border: none;
@@ -645,11 +645,11 @@ padding-left: 50px;
   background-color: rgb(239, 239, 239);
 }
 
-#contact-input-field::placeholder {
+.contact-input-field::placeholder {
   color: #bcbcbc;
 }
 
-#contact-input-field:focus {
+.contact-input-field:focus {
   box-shadow: 0 0 7px rgba(0, 0, 255, 0.5);
 }
 
@@ -825,4 +825,89 @@ border: 1px solid black;
   text-align: justify;
 }
 
+/* --------------------login-------------------------- */
 
+
+#login-txt{
+  font-size: 40px;
+  font-weight: bold;
+  text-align: center;
+  padding-top: 40px;
+}
+
+.login-container{
+  display: flex;
+margin-left: 220px;
+padding-right: 100px;
+}
+
+.login-box{
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 50px;
+  flex-direction: column;
+  gap: 20px;
+  /* padding-left: 100px; */
+}
+
+
+#btn-login{
+  outline: none;
+  border: none;
+  width: 100px;
+  height: 30px;
+  border-radius: 5px;
+  background-color: rgb(0, 162, 0);
+  font-size: 16px;
+  font-weight: bold;
+  color: white;
+  transition: background-color 0.3s, color 0.3s;
+  cursor: pointer;
+  margin-left: 115px;
+  margin-top: 50px;
+}
+
+#btn-login:hover{
+  background-color: green;
+  
+}
+
+.from-field label{
+  font-size: 18px;
+  color: #000000b2;
+  margin-bottom: 8px;
+  margin-top: 20px;
+}
+
+#sign-up-txt{
+  text-decoration: none;
+  color: blue;
+  padding-bottom: 40px;
+}
+
+
+.image-box{
+  flex: 1;
+  display: flex;
+  padding-top: 50px;
+}
+
+.login-image-container{
+  display: flex;
+  width: 300px;
+  height: 300px;
+  align-items: center;
+  justify-content: center;
+}
+.login-image-container img{
+  height: inherit;
+  width: inherit;
+  object-fit: contain;
+}
+
+.from-field{
+  display: flex;
+  flex-direction: column;
+}
