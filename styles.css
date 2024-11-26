@@ -911,3 +911,112 @@ padding-right: 100px;
   display: flex;
   flex-direction: column;
 }
+
+/* -----------------------admin dashboard--------------------- */
+.user-img-container{
+  height: 50px;
+  width: 50px;
+  border-radius: 100px;
+  
+}
+
+.user-img-container img{
+  height: inherit;
+  width: inherit;
+  object-fit: cover;
+  border-radius: inherit;
+}
+
+#admin-name{
+  color: white;
+  font-size: 20px;
+}
+
+.user-name-img{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.min-container {
+  width: 150px;
+  height: 150px;
+  background-color: #f0f0f0;
+  text-align: center;
+  padding-left: 20px;
+  padding-right: 20px;
+  border-radius: 5px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.min-container:hover{
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2), 0 6px 20px rgba(0, 0, 0, 0.19);
+  transform: translateY(-3px);
+}
+
+
+
+#no{
+  font-size: 40px;
+  font-weight: bold;
+}
+
+#min-text{
+  font-size: 20px;
+}
+
+.admin-items{
+  text-decoration: none;
+  color: black;
+}
+
+.admin-list{
+  background-color: #f1f1f1;
+  height:350px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 20px;
+}
+
+.admin-list ul{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  list-style: none;
+}
+
+
+
+.admin-list ul li a {
+  text-decoration: none;
+  font-size: large;
+  text-align: center;
+  font-weight: 100; 
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #555;
+  border: 1px solid transparent;
+  transition: font-weight 0.3s ease, color 0.3s ease; 
+}
+.admin-list ul li a:hover {
+  color: #000; 
+  font-weight: 400;
+}
+
+marquee{
+  display: flex;
+  align-items: center;
+  height: 150px;
+  font-family: Arial, sans-serif;
+  font-size: 30px;
+  font-weight: bold;
+  color: #007BFF;
+  background-color: #F8F9FA;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
