@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>edit categories</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- navbar -->
+    <div class="nav-container">
+        <div class="logo-img">
+            <img src="images/logo.png" alt="" width="150px">
+        </div>
+
+        <div class="user-name-img">
+            <div class="user-img-container">
+                <img src="images/profile_user.jpg" alt="">
+            </div>
+
+            <div id="admin-name">Admin name</div>
+        </div>
+    </div>
+
+    <!-- edit container -->
+    <div class="admin-product-form-container">
+        <h1 class="admin-product-form-header">Edit Categories</h1>
+        <form class="admin-product-form" action="" method="POST">
+            <input type="hidden" value="" name="id">
+            <div class="admin-product-form-group">
+                <label class="admin-product-form-label">Categories Name:</label>
+                <input type="text" name="c_name" id="c_name" class="admin-product-form-input" value="name">
+            </div>
+            <div class="admin-product-form-group admin-product-form-buttons">
+                <button type="button" class="admin-product-form-button admin-product-form-previous" onclick="window.history.back()">Cancel</button>
+                <button type="submit" class="admin-product-form-button admin-product-form-submit" name="submit">Update Categories</button>
+            </div>
+        </form>
+    </div>
+    </body>
+    </html>
