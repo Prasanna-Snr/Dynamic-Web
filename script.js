@@ -38,5 +38,9 @@ function removeItem(button) {
     updateCartTotal();
 }
 
+function checkout(){
+    window.location.href="checkout.html"
+}
+
 
 
