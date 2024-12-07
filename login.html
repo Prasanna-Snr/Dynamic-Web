@@ -1,27 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>login</title>
     <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
     <p id="login-txt">login</p>
     <div class="login-container">
         <div class="login-box">
             <form action="">
-                <div class="from-field">
+                <div class="from-field ">
                     <label for="email">Email:</label>
                     <input type="email" name="email" class="contact-input-field" id="email" placeholder="Email">
-                </div>
-    
-                <div class="from-field">
-                    <label for="psw">Password:</label>
-                    <input type="password" name="psw" class="contact-input-field" id="psw" placeholder="Password">
+                    <span></span>
                 </div>
 
-                <button id="btn-login" name="submit">Login</button>
+                <div class="from-field ">
+                    <label for="psw">Password:</label>
+                    <input type="password" name="psw" class="contact-input-field" id="psw" placeholder="Password">
+                    <span></span>
+                </div>
+
+                <button class="btn-login" id="submit" name="submit">Login</button>
             </form>
             <p>don't have an account? <a href="" id="sign-up-txt">Sign Up</a></p>
         </div>
@@ -31,5 +35,61 @@
             </div>
         </div>
     </div>
+
+    <script>
+        document.getElementById("submit").addEventListener("click", function (event) {
+            event.preventDefault();
+            checkData();
+        });
+
+        var email = document.getElementById("email");
+        var password = document.getElementById("psw");
+
+
+        // validation data
+
+        function checkData() {
+            var emailValue = email.value.trim();
+            var passwordValue = password.value.trim();
+            
+            // for email
+            if (emailValue == "") {
+                setError(email, "email required");
+            } else if (!isEmail(emailValue)) {
+                setError(email, "email is not valide")
+            } else {
+                setSuccess(email);
+            }
+
+            // for password
+            if(passwordValue==""){
+                setError(psw,"required password");
+            }else{
+                setSuccess(psw);
+            }
+
+            
+        }
+
+        function setError(e, msg) {
+            var parentBox = e.parentElement;
+            parentBox.className = "from-field error";
+            var span = parentBox.querySelector("span");
+            span.innerText = msg;
+        }
+
+        function setSuccess(e) {
+            var parentBox = e.parentElement;
+            parentBox.className = "from-field success"
+        }
+
+        function isEmail(e) {
+            var reg = /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
+            return reg.test(e);
+        }
+
+
+    </script>
 </body>
+
 </html>

@@ -860,7 +860,7 @@ gap: 20px;
 }
 
 
-#btn-login{
+.btn-login{
 outline: none;
 border: none;
 width: 100px;
@@ -876,7 +876,7 @@ margin-left: 115px;
 margin-top: 50px;
 }
 
-#btn-login:hover{
+.btn-login:hover{
 background-color: green;
 
 }
@@ -1247,4 +1247,109 @@ margin-left: 30px;
 
 .admin-product-form-previous:hover {
   background-color: #0056b3;
+}
+
+/* -------------cart--------------- */
+
+.cart-container {
+  margin-top: 100px;
+  width: 70%;
+  margin: 20px auto;
+  background-color: white;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+table, th, td {
+  border: 1px solid #ddd;
+}
+
+th, td {
+  padding: 10px;
+  text-align: center;
+}
+
+.cart-product-image {
+  width: 150px;
+  height: 150px;
+  object-fit: contain;
+  padding: 10px;
+}
+
+.cart-quantity-btn {
+  padding: 5px 10px;
+  font-size: 16px;
+  background-color: #f0f0f0;
+  border: 1px solid #ddd;
+  cursor: pointer;
+}
+
+.cart-quantity {
+  margin: 0 10px;
+}
+
+.cart-remove-btn {
+  background-color: red;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.cart-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.cart-total-price {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.cart-checkout-btn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+}
+
+/* -----------login form validation css--------------- */
+.from-field.error input{
+  border:  1px solid red;
+}
+
+.from-field span{
+  display: none;
+}
+
+.from-field.error span{
+  color: red;
+  display: block;
+}
+
+.from-field.error input:focus{
+  box-shadow: 0 0 7px rgba(255, 0, 0, 0.406);
+}
+
+
+.from-field.success input{
+  border: 1px solid #4CAF50;
+  box-shadow: 0 0 7px rgba(0, 255, 51, 0.468);
+}
+
+.from-field.success span{
+  display: none;
 }
