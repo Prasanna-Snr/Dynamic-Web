@@ -14,26 +14,31 @@
                 <div class="from-field">
                     <label for="fullname">Fullname:</label>
                     <input type="text" name="fullname" id="fullname" class="contact-input-field" placeholder="Fullname">
+                    <span></span>
                 </div>
     
                 <div class="from-field">
                     <label for="uname">Username:</label>
                     <input type="text" name="uname" class="contact-input-field" id="uname" placeholder="Username">
+                    <span></span>
                 </div>
 
                 <div class="from-field">
                     <label for="email">Email:</label>
                     <input type="email" name="email" id="email" class="contact-input-field" placeholder="Email">
+                    <span></span>
                 </div>
 
                 <div class="from-field">
                     <label for="psw">Password:</label>
                     <input type="password" name="psw" id="psw" class="contact-input-field" placeholder="Password">
+                    <span></span>
                 </div>
 
                 <div class="from-field">
                     <label for="cpsw">Confirm:</label>
                     <input type="password" name="cpsw" id="cpsw" class="contact-input-field" placeholder="Confirm">
+                    <span></span>
                 </div>
 
                 <button class="btn-login" id="submit" name="submit">Sign up</button>
@@ -46,5 +51,91 @@
             </div>
         </div>
     </div>
+
+
+    <script>
+        document.getElementById("submit").addEventListener("click", function (event) {
+            event.preventDefault();
+            checkData();
+        });
+        var fullname = document.getElementById("fullname");
+        var uname = document.getElementById("uname");
+        var email = document.getElementById("email");
+        var password = document.getElementById("psw");
+        var confirmPassword = document.getElementById("cpsw");
+
+
+        // validation data
+
+        function checkData() {
+            var fullnameValue = fullname.value.trim();
+            var usernameValue = uname.value.trim();
+            var emailValue = email.value.trim();
+            var passwordValue = password.value.trim();
+            var confirmPasswordValue = confirmPassword.value.trim();
+
+            // for fullname
+            if(fullnameValue==""){
+                setError(fullname,"name required")
+            }else{
+                setSuccess(fullname);
+            }
+
+            // for username
+            if(usernameValue ==""){
+                setError(uname,"username required");
+            }else {
+                setSuccess(uname);
+            }
+
+            // for email
+            if (emailValue == "") {
+                setError(email, "email required");
+            } else if (!isEmail(emailValue)) {
+                setError(email, "email is not valide")
+            } else {
+                setSuccess(email);
+            }
+
+            // for password
+            if(passwordValue==""){
+                setError(psw,"required password");
+            }else{
+                setSuccess(psw);
+            }
+
+
+            // for confirm password
+            if(confirmPasswordValue==""){
+                setError(cpsw,"confirm password");
+            }else if(passwordValue!=confirmPasswordValue){
+                setError(cpsw,"not match")
+            }
+            else{
+                setSuccess(cpsw);
+            }
+
+            
+        }
+
+        function setError(e, msg) {
+            var parentBox = e.parentElement;
+            parentBox.className = "from-field error";
+            var span = parentBox.querySelector("span");
+            span.innerText = msg;
+        }
+
+        function setSuccess(e) {
+            var parentBox = e.parentElement;
+            parentBox.className = "from-field success"
+        }
+
+        function isEmail(e) {
+            var reg = /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
+            return reg.test(e);
+        }
+
+
+    </script>
 </body>
 </html>
