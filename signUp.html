@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>sign up</title>
     <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
     <p id="login-txt">Sign Up</p>
     <div class="login-container">
@@ -16,7 +18,7 @@
                     <input type="text" name="fullname" id="fullname" class="contact-input-field" placeholder="Fullname">
                     <span></span>
                 </div>
-    
+
                 <div class="from-field">
                     <label for="uname">Username:</label>
                     <input type="text" name="uname" class="contact-input-field" id="uname" placeholder="Username">
@@ -75,16 +77,16 @@
             var confirmPasswordValue = confirmPassword.value.trim();
 
             // for fullname
-            if(fullnameValue==""){
-                setError(fullname,"name required")
-            }else{
+            if (fullnameValue == "") {
+                setError(fullname, "name required")
+            } else {
                 setSuccess(fullname);
             }
 
             // for username
-            if(usernameValue ==""){
-                setError(uname,"username required");
-            }else {
+            if (usernameValue == "") {
+                setError(uname, "username required");
+            } else {
                 setSuccess(uname);
             }
 
@@ -98,24 +100,24 @@
             }
 
             // for password
-            if(passwordValue==""){
-                setError(psw,"required password");
-            }else{
+            if (passwordValue == "") {
+                setError(psw, "required password");
+            } else {
                 setSuccess(psw);
             }
 
 
             // for confirm password
-            if(confirmPasswordValue==""){
-                setError(cpsw,"confirm password");
-            }else if(passwordValue!=confirmPasswordValue){
-                setError(cpsw,"not match")
+            if (confirmPasswordValue == "") {
+                setError(cpsw, "confirm password");
+            } else if (passwordValue != confirmPasswordValue) {
+                setError(cpsw, "not match")
             }
-            else{
+            else {
                 setSuccess(cpsw);
             }
 
-            
+
         }
 
         function setError(e, msg) {
@@ -138,4 +140,5 @@
 
     </script>
 </body>
+
 </html>

@@ -30,7 +30,7 @@
             </div>
 
             <a href="cart.html" class="cart">
-                <span>Your cart</span>
+                <span>Your cart <span id="cart-count"></span></span>
                 <i class="fa fa-shopping-cart"></i>
             </a>
 
@@ -77,7 +77,7 @@
 
                 <div class="quality-container">
                     <p>QUALITY:</p>
-                    <input type="number" id="quality" value="1">
+                    <input type="number" id="quality" value="1" min="1">
                 </div>
             </div>
 
@@ -174,6 +174,24 @@
             <p>&copy; 2024 Dokan. All rights reserved.</p>
         </div>
     </div>
+
+    <script>
+        const cartCount = document.getElementById("cart-count"); 
+        const addToCartButton = document.getElementById("add-to-cart"); 
+        const quantityInput = document.getElementById("quality"); 
+
+        let totalItems = 0;
+        addToCartButton.addEventListener("click", () => {
+            let quantity = parseInt(quantityInput.value);
+
+            if (quantity > 0) {
+                totalItems += quantity;
+                cartCount.textContent = totalItems;
+            }
+        });
+
+    </script>
+
 </body>
 
 </html>

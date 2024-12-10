@@ -104,7 +104,6 @@
     <button id="close-popup">OK</button>
 </div>
 
-<!-- JavaScript -->
 <script>
     document.querySelectorAll('.admin-items').forEach((item) => {
         item.addEventListener('click', function (event) {
@@ -118,19 +117,13 @@
             document.getElementById(method).style.display = 'block';
         });
     });
-
-    // Show thank you popup after clicking "OK" on COD
     document.getElementById('cod-button').addEventListener('click', function () {
-        // Hide COD payment section
         document.getElementById('cod').style.display = 'none';
 
-        // Show the thank you popup
         document.getElementById('thank-you-popup').style.display = 'block';
     });
 
-    // Close the popup when clicking "OK"
     document.getElementById('close-popup').addEventListener('click', function () {
-        // Hide the popup
         document.getElementById('thank-you-popup').style.display = 'none';
     });
 </script>

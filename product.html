@@ -30,11 +30,12 @@
             </div>
 
             <a href="cart.html" class="cart">
-                <span>Your cart</span>
+                <span>Your cart <span id="cart-count"></span></span>
                 <i class="fa fa-shopping-cart"></i>
             </a>
-
         </div>
+
+    </div>
 
     </div>
 
@@ -177,10 +178,10 @@
                     <p id="quick-link">Quick Links</p>
                     <div class="link">
                         <ul>
-                            <li><a href="#">Home</a></li>
-                            <li><a href="#">Categories</a></li>
-                            <li><a href="#">Product</a></li>
-                            <li><a href="#">Contact</a></li>
+                            <li><a href="home.html">Home</a></li>
+                            <li><a href="categories.html">Categories</a></li>
+                            <li><a href="product.html">Product</a></li>
+                            <li><a href="contact.html">Contact</a></li>
                         </ul>
                     </div>
                 </div>
@@ -221,6 +222,25 @@
             </div>
         </div>
     </div>
+
+    <script>
+        const cartCountElement = document.getElementById('cart-count'); 
+        const addToCartButtons = document.querySelectorAll('.add-to-cart'); 
+        let totalCartItems = 0; 
+
+        addToCartButtons.forEach((button) => {
+            button.addEventListener('click', (event) => {
+                event.preventDefault(); 
+
+                totalCartItems += 1;
+                updateCartCount();
+            });
+        });
+
+        function updateCartCount() {
+            cartCountElement.textContent = totalCartItems; 
+        }
+    </script>
 </body>
 
 </html>

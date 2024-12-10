@@ -31,7 +31,7 @@
             </div>
 
             <a href="cart.html" class="cart">
-                <span>Your cart</span>
+                <span>Your cart <span id="cart-count"></span></span>
                 <i class="fa fa-shopping-cart"></i>
             </a>
         </div>
@@ -221,10 +221,10 @@
                 <p id="quick-link">Quick Links</p>
                 <div class="link">
                     <ul>
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">Categories</a></li>
-                        <li><a href="#">Product</a></li>
-                        <li><a href="#">Contact</a></li>
+                        <li><a href="home.html">Home</a></li>
+                        <li><a href="categories.html">Categories</a></li>
+                        <li><a href="product.html">Product</a></li>
+                        <li><a href="contact.html">Contact</a></li>
                     </ul>
                 </div>
             </div>
@@ -264,6 +264,92 @@
             <p>&copy; 2024 Dokan. All rights reserved.</p>
         </div>
     </div>
+
+    <script>
+        function updateQuantity(button, change) {
+            const quantityElement = button.parentNode.querySelector('.cart-quantity');
+            let quantity = parseInt(quantityElement.textContent);
+            quantity += change;
+
+            if (quantity < 1) {
+                quantity = 1;
+            }
+
+            quantityElement.textContent = quantity;
+            updateTotal(button.closest('.cart-item'));
+        }
+
+        function updateTotal(item) {
+            const price = parseFloat(item.querySelector('td:nth-child(2)').textContent.replace('Rs.', '').trim());
+            const quantity = parseInt(item.querySelector('.cart-quantity').textContent);
+            const total = price * quantity;
+            item.querySelector('.cart-total').textContent = `Rs.${total.toFixed(2)}`;
+            updateCartTotal();
+        }
+
+        function updateCartTotal() {
+            const allItems = document.querySelectorAll('.cart-item');
+            let cartTotal = 0;
+
+            allItems.forEach(item => {
+                const itemTotal = parseFloat(item.querySelector('.cart-total').textContent.replace('Rs.', '').trim());
+                cartTotal += itemTotal;
+            });
+
+            document.getElementById('cart-total-price').textContent = `Rs.${cartTotal.toFixed(2)}`;
+        }
+
+        function removeItem(button) {
+            const item = button.closest('.cart-item');
+            item.remove();
+            updateCartTotal();
+        }
+
+        function checkout() {
+            window.location.href = "checkout.html"
+        }
+
+        const cartCount = document.getElementById("cart-count");
+        const addToCartButtons = document.querySelectorAll(".add-to-cart");
+        const quantityInputs = document.querySelectorAll(".quality");
+
+
+        let totalCartItems = 0;
+
+
+        function handleAddToCart(event) {
+            event.preventDefault();
+
+            const parentContainer = event.target.closest(".items");
+            const quantityInput = parentContainer.querySelector(".quality");
+            const quantity = quantityInput ? parseInt(quantityInput.value, 10) : 1;
+
+            if (isNaN(quantity) || quantity <= 0) {
+                alert("Please enter a valid quantity.");
+                return;
+            }
+
+            totalCartItems += quantity;
+            cartCount.textContent = totalCartItems;
+
+            console.log(`Added ${quantity} item(s) to the cart.`);
+        }
+
+        addToCartButtons.forEach((button) => {
+            button.addEventListener("click", handleAddToCart);
+        });
+
+
+        quantityInputs.forEach((input) => {
+            input.addEventListener("input", (event) => {
+                const value = parseInt(event.target.value, 10);
+                if (isNaN(value) || value <= 0) {
+                    input.value = 1;
+                }
+            });
+        });
+
+    </script>
 
 </body>
 
