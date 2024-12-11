@@ -27,7 +27,8 @@
     <!-- product form container -->
     <div class="admin-product-form-container">
         <h1 class="admin-product-form-header">Add New Product</h1>
-        <form class="admin-product-form" action="example.com" method="POST" enctype="multipart/form-data">
+        <form class="admin-product-form" action="example.com" method="POST"
+         enctype="multipart/form-data">
             <div class="admin-product-form-group">
                 <label class="admin-product-form-label" for="name">Product Name:</label>
                 <input type="text" name="name" id="name" class="admin-product-form-input">
@@ -47,17 +48,20 @@
             </div>
             <div class="admin-product-form-group">
                 <label class="admin-product-form-label" for="image">Product Image:</label>
-                <input type="file" name="image" id="image" class="admin-product-form-input-file" accept="image/*">
+                <input type="file" name="image" id="image" class="admin-product-form-input-file" 
+                accept="image/*">
                 <span></span>
             </div>
             <div class="admin-product-form-group">
                 <label class="admin-product-form-label">Description:</label>
-                <textarea name="description" id="description" class="admin-product-form-textarea" rows="4"></textarea>
+                <textarea name="description" id="description" class="admin-product-form-textarea"
+                 rows="4"></textarea>
                 <span></span>
             </div>
             <div class="admin-product-form-group">
                 <label class="admin-product-form-label">Price:</label>
-                <input type="number" name="price-input" id="price-input" class="admin-product-form-input" min="0">
+                <input type="number" name="price-input" id="price-input" 
+                class="admin-product-form-input" min="0">
             </div>
             <div class="admin-product-form-group">
                 <label class="admin-product-form-label">Offer:</label>
@@ -65,13 +69,16 @@
             </div>
             <div class="admin-product-form-group">
                 <label class="admin-product-form-label">Discount (%):</label>
-                <input type="number" name="discount" id="discount" class="admin-product-form-input" min="0" max="100">
+                <input type="number" name="discount" id="discount" 
+                class="admin-product-form-input" min="0" max="100">
             </div>
             <div class="admin-product-form-group admin-product-form-buttons">
                 <button type="button" class="admin-product-form-button admin-product-form-previous"
                     onclick="window.history.back()">Previous</button>
-                <button type="reset" class="admin-product-form-button admin-product-form-clear">Clear</button>
-                <button type="submit" id="submit" class="admin-product-form-button admin-product-form-submit" name="submit">Add New
+                <button type="reset" 
+                class="admin-product-form-button admin-product-form-clear">Clear</button>
+                <button type="submit" id="submit" 
+                class="admin-product-form-button admin-product-form-submit" name="submit">Add New
                     Product</button>
             </div>
         </form>
